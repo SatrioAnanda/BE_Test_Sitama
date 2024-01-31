@@ -24,7 +24,7 @@ use Illuminate\Support\Facades\Route;
 //Order API
 Route::get('/order', [OrdersController::class, 'get']);
 Route::post('/order/create', [OrdersController::class, 'create']);
-Route::delete('/order/delete/{id}', [OrdersController::class, 'create'])->where('id', '[0-9]+');
+Route::delete('/order/delete/{id}', [OrdersController::class, 'delete'])->where('id', '[0-9]+');
 
 // Dynamic Render API
 Route::get('/dynamic-render/{id}', [DynamicRenderController::class, 'getByOrder'])->where('id', '[0-9]+');
